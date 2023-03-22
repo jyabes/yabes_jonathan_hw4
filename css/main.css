@@ -282,11 +282,15 @@ input[type="checkbox"] {
     color: rgb(255, 255, 255);
   }
 
-  div::before {
-    content: "ITEM 1"
+
+
+  #done input[type='checkbox']:checked + label {
+    color:red;
+    text-decoration: lavender;
   }
 
-  
-  div::after {
-    content: "ITEM 1 IS GOOD!"
+  #done input[type='checkbox']:checked + label::after {
+    content: "\2713";
+    color:green;
+    margin-left:10px;
   }
