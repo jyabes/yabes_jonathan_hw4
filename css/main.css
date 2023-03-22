@@ -14,11 +14,21 @@ body {
     background-color:black;
     color:white;
     font-family:helvetica, sans-serif;
+    background-image: url("..//img/pencils_background.jpg");
+    background-size:auto;
+    
 }
 
 header > h1 {
+    font-size: 90px;
     text-align:center;
-    padding:8px;
+    text-decoration-line:underline;
+    color: rgb(254, 255, 173);
+    padding:20px;
+    margin:10px;
+    margin-top:100px;
+    background-color: rgb(99, 49, 0);
+    padding: 110px;
 }
 
 main {
@@ -60,14 +70,15 @@ display:inline-block;
 
 margin-left:12px;
 margin-right:12px;
-
 }
 
 
 article > h2 {
     color: gray;
-    padding:4px 8px;
+    padding:50px 8px;
 }
+
+
 
 ul {
     list-style-type:none;
@@ -75,14 +86,19 @@ ul {
 
 
 article:first-of-type {
-    border-color:white;
+    border-color:rgb(209, 0, 171);
 }
 
 article:first-of-type h2 {
-    border-color:white;
+    border-color:rgb(255, 255, 255);
 }
 
-#inprogress { border-color:red; }
+#todo li:nth-child(odd) {
+    background-color:rgba(209, 0, 171, 0.308);
+    padding: 9px;  
+}
+
+#inprogress { border-color:rgb(234, 255, 0); }
 #inprogress h2 { color:red; }
 
 #done { border-color:green; }
@@ -93,14 +109,184 @@ ul li {
     text-transform:uppercase;
 }
 
-#todo li:nth-child(odd) {
-    background-color:rgba(255,255,255,0.2);
+a:hover {
+    color:green;
+    text-decoration:underline overline;
+    background-color: rgb(251, 192, 42);
+    padding-right:100px;
+
 }
+
+
 
 #inprogress li:nth-child(odd) {
     background-color:rgba(255,0,0,0.2);
 }
 
 #done li:nth-child(odd) {
-    background-color:rgba(0,255,255,0.2);
+    background-color:rgba(0,255,0,0.2);
 }
+
+
+#todos { 
+    font-size:50px;
+    font-style: italic;
+    color:brown
+}
+
+#inprogress2 { 
+    font-size:44px;
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(19, 119, 119);
+}
+
+#done2 { 
+    font-size:46px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+
+/* RESPONSIVE CODE */
+article {
+    width:00%;
+    margin:10 0px;
+}
+
+main {
+    margin: 0 12px;
+}
+
+@media(min-width:960px) {
+    article {
+        width:25%;
+        margin:10px 12px;
+    }
+    main {margin:0;}
+}
+
+input[type="checkbox"] {
+    margin-right: 30px;
+    margin-left:20px;
+    width: 20px;
+    height: 20px;    
+}
+  
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0px;
+
+  }
+  
+
+  /* IN PROGRESS */
+
+  #task1 + label {
+    color: black;
+  }
+  
+  #task1:checked + label {
+    color: red;
+  }
+
+  #task2 + label {
+    color: black;
+  }
+  
+  #task2:checked + label {
+    color: rgb(27, 170, 2);
+  }
+
+  #task3 + label {
+    color: black;
+  }
+  
+  #task3:checked + label {
+    color: rgb(2, 117, 170);
+  }
+  
+  #task4 + label {
+    color: black;
+  }
+  
+  #task4:checked + label {
+    color: rgb(168, 45, 190);
+  }
+
+  #task5 + label {
+    color: black;
+  }
+  
+  #task5:checked + label {
+    color: rgb(255, 255, 255);
+  }
+
+  #task6 + label {
+    color: black;
+  }
+  
+  #task6:checked + label {
+    color: rgb(255, 213, 3);
+  }
+
+/* DONE */
+
+#task1a + label {
+    color: black;
+  }
+  
+  #task1a:checked + label {
+    color: rgb(0, 255, 179);
+
+    
+  }
+
+  #task2b + label {
+    color: black;
+  }
+  
+  #task2b:checked + label {
+    color: rgb(200, 255, 0);
+  }
+
+  #task3c + label {
+    color: black;
+  }
+  
+  #task3c:checked + label {
+    color: rgb(253, 0, 67);
+  }
+  
+  #task4d + label {
+    color: black;
+  }
+  
+  #task4d:checked + label {
+    color: rgb(0, 129, 194);
+  }
+
+  #task5e + label {
+    color: black;
+  }
+  
+  #task5e:checked + label {
+    color: rgb(160, 2, 2);
+  }
+
+  #task6f + label {
+    color: black;
+  }
+  
+  #task6f:checked + label {
+    color: rgb(255, 255, 255);
+  }
+
+  div::before {
+    content: "ITEM 1"
+  }
+
+  
+  div::after {
+    content: "ITEM 1 IS GOOD!"
+  }
